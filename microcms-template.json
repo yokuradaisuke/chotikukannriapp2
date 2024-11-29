@@ -1,0 +1,94 @@
+{
+	"name": "template",
+	"plan": "Hobby",
+	"schemaVersion": "1.0.0",
+	"schema": [
+		{
+			"apiId": "API#f8fc4cb2-9a9b-4645-a51f-14efe2bc6aaa",
+			"apiName": "店舗設定",
+			"apiDescription": "店舗名の設定を行います",
+			"apiEndpoint": "config",
+			"apiType": "PAGE",
+			"apiFields": [
+				{
+					"idValue": "bulbkmOxXA",
+					"fieldId": "shopName",
+					"name": "店舗名",
+					"kind": "text",
+					"required": true
+				}
+			],
+			"customFields": []
+		},
+		{
+			"apiId": "API#58ca0aeb-62d7-435c-9dcb-f6dee51e905b",
+			"apiName": "販売",
+			"apiDescription": "販売履歴が登録されます",
+			"apiEndpoint": "sale",
+			"apiType": "LIST",
+			"apiFields": [
+				{
+					"idValue": "fEUuDfTzdf",
+					"fieldId": "saleItems",
+					"name": "販売商品",
+					"kind": "repeater",
+					"customFieldCreatedAtList": ["2023-04-30T08:02:06.669Z"]
+				},
+				{
+					"idValue": "vsE1Bft6FV",
+					"fieldId": "totalPrice",
+					"name": "合計金額",
+					"kind": "number"
+				}
+			],
+			"customFields": [
+				{
+					"apiId": "API#58ca0aeb-62d7-435c-9dcb-f6dee51e905b",
+					"createdAt": "2023-04-30T08:02:06.669Z",
+					"fieldId": "items",
+					"name": "販売商品",
+					"fields": [
+						{
+							"idValue": "HUdupLnYqn",
+							"fieldId": "item",
+							"name": "商品",
+							"kind": "relation",
+							"referenceKey": "API#10cbe187-2672-4dbf-94ff-5d25a46a1cc6"
+						},
+						{
+							"idValue": "g3nSP90i4F",
+							"fieldId": "number",
+							"name": "個数",
+							"kind": "number"
+						}
+					],
+					"position": [["HUdupLnYqn"], ["g3nSP90i4F"]],
+					"updatedAt": "2023-04-30T08:02:06.669Z",
+					"viewerGroup": "Hrk"
+				}
+			]
+		},
+		{
+			"apiId": "API#10cbe187-2672-4dbf-94ff-5d25a46a1cc6",
+			"apiName": "商品",
+			"apiDescription": "商品情報を登録します",
+			"apiEndpoint": "items",
+			"apiType": "LIST",
+			"apiFields": [
+				{
+					"idValue": "bXQ8loBbBb",
+					"fieldId": "title",
+					"name": "商品名",
+					"kind": "text"
+				},
+				{
+					"idValue": "M8KrPxs-9j",
+					"fieldId": "price",
+					"name": "金額",
+					"kind": "number"
+				}
+			],
+			"customFields": []
+		}
+	]
+}
